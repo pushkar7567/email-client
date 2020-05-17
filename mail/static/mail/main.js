@@ -39,6 +39,8 @@ function load(mailbox) {
     fetch('/emails/'+mailbox)
     .then(response => response.json())
     .then(emails => {
-        console.log(emails);
+        var json = emails;
+        var objs = JSON.stringify(json);
+        console.log(objs);
     });
 }
