@@ -2,6 +2,10 @@ textarea {
     min-height: 400px;
 }
 
-.email_view {
-    border-style: solid;
-}
+.mystyle {
+    width: 100%;
+    padding: 25px;
+    background-color: coral;
+    color: gray;
+    font-size: 25px;
+  }

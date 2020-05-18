@@ -39,8 +39,12 @@ function load(mailbox) {
     fetch('/emails/'+mailbox)
     .then(response => response.json())
     .then(emails => {
-        var json = emails;
-        var objs = JSON.stringify(json);
-        console.log(objs);
+        emails.forEach(function myfunction(email){
+            var email_node = document.createElement("div");
+            email_node.classList = "mystyle"
+            email_view = document.querySelector('#emails-view').appendChild(email_node);
+            email_view.innerHTML = "TO: " + email.recipients + "    "+email.subject+" "+email.timestamp;
+            console.log(email);
+        });
     });
 }
